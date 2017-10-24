@@ -1,0 +1,265 @@
+/*общий фон #f6f9f9
+футер - #2d3950 на 10% прозрачный
+#f6f9f9 - самый низ и самый верх
+#15a4fa*/
+* {
+	padding: 0px; 
+	margin:0px; 
+	box-sizing: border-box;	
+	color: rgba(50,50,50,0.9);
+	background-color:#f6f9f9;
+}
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+	font-family: 'Lato', sans-serif;
+}
+header {
+	display: flex;
+	flex-wrap: wrap;
+	height:100vh;
+	flex-basis:100%;
+}
+.logo:before {	display:inline-block;
+	content:'';
+	margin-left:2em;
+/*сюда воткнуть логотип сайта*/
+	 }
+.gear {padding:1rem; animation-name: rotation; animation-duration: 10s;
+	animation-iteration-count: infinite; background-color: transparent;
+	animation-timing-function: linear;}
+.logo { display:flex; 
+	width:100%; height:5vh; 
+	font-size: 2em;
+	font-weight: bold;
+	align-items: space-around;
+	justify-content: space-around; flex-direction: row-reverse;}
+
+.image-head {
+	width: 100%; height: 85%; 
+	background-image: url('img/head.jpg');
+	background-size: 100% 100vh;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+}
+.marginb-1 {margin-bottom: 1rem;}
+.call {
+	flex-direction: column;
+	display: flex;
+	flex-wrap:wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	background:transparent;
+}
+.border {	
+	width:100%;
+	border: 2px solid #15a4fa;
+}
+.text-head {
+	background:transparent;
+	color: white;
+	font-size: 1.5em;
+}
+.button {
+	font-size: 1.5em;
+	padding: 1em 2em ;
+	background-color: #15a4fa;
+	border-radius:5px 5px;
+	text-decoration: none;
+	color: white;
+	top:95%;
+	left:33%;
+	margin-bottom:3rem;
+}
+.button_send {
+	padding: 0.5em 1em ;
+	background-color: #15a4fa;
+	border-radius:5px 5px;
+	text-decoration: none;
+	color: white;
+	top:95%;
+	left:33%;
+	margin-bottom:3rem;	
+}
+.arrow {
+	width:2rem;
+	height: 2rem;
+	border-left:3px solid white;
+	border-bottom:3px solid white;
+	background-color: transparent;
+	transform: rotate(-45deg);
+}
+article {
+	display: flex;
+	justify-content: center;
+	flex-wrap:wrap;
+}
+.second-screen {
+	height:90vh;
+}
+.third-screen {
+	/*height: 150vh;*/
+}
+h1 { 
+	background:transparent;
+	font-weight: bold;
+	justify-content: center;
+	font-size: 7em;
+	color: white;
+	align-items: center;
+}
+h2 {height: 3rem;
+	color: #2d3950;
+	font-size:2.5em;
+	margin-top: 3rem;
+}
+p {
+	align-items:center;
+	font-size:1.1em;
+	color:#9f9f9f;
+	flex-basis:70%;
+}
+.block {
+	display:flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap:wrap;
+}
+.white {
+	background-color: white;
+}
+.block-small {
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-basis: 15rem;
+}
+/*.second-screen .block {изменить здесь на флекс и увеличения}*/
+.commit {
+	text-align: center;
+	background-color: transparent;
+	color:#9f9f9f;	
+	margin-top:1rem;
+}
+.block img {margin-bottom: 1rem;}
+.portfolio {
+	overflow: hidden;
+	margin-top:10vh;
+	margin-bottom: 10vh;
+	display:flex; 
+	align-content: space-around; 
+	justify-content: space-around;
+	flex-wrap:wrap;}
+.image 	{	
+	margin-top: 1rem;
+	border: 1px solid black;
+	flex-direction: column;
+	background-image: url(img/image.jpg);
+	overflow: hidden;
+	width:15rem;
+	height:15rem;
+    background-repeat:no-repeat;
+	background-position: 50% 50%;}
+.image:nth-child(2) {background-image: url(img/2image.jpg);}
+.image:nth-child(3) {background-image: url(img/3image.jpg);}
+.image:nth-child(4) {background-image: url(img/4image.jpg);}
+.image:nth-child(5) {background-image: url(img/5image.jpg); }
+.image:last-child {background-image: url(img/6image.jpg);}
+.image:hover img {display: flex; animation-name: opacity;
+	animation-duration: 1s; animation-fill-mode: forwards;}
+.image:hover a {display:flex; filter:opacity(0.9);}
+.image img {display:none; position:absolute; 
+	background-image: url(img/BG.png);
+	 width:15rem; height:15rem;}
+.zoom {display:none; background-image: url(img/zoom.png); 
+	position: absolute; width:3rem; height:3rem;
+	background-position: 50% 50%; background-repeat: no-repeat;
+	background-color: #15a4fa; margin-left:6.5rem; margin-top:6.5rem;}
+
+.contact {
+	margin-bottom: 5rem; margin-top:5rem;
+	height:80vh; text-align: center;
+}
+.contact h2 {color:white;}
+.contact .centro, .contact form,.contact h2 {
+	background-color: transparent; }
+.foot_image, .mask_foot {
+	display: flex;
+	align-items: center;
+	position:absolute;
+	width:100%;
+	height: 100%;
+}
+.foot_image {background-image: url('img/foot-image.jpg');}
+.mask_foot {background-image: url(img/mask_foot_image.png);}
+.mask_foot {animation-name: opacity; animation-fill-mode: forwards;}
+input[type="text"],textarea {
+	/*сделать прозрачную инпут панель*/
+ 	color:white;
+	padding: 10px;
+ 	box-shadow:
+ 	0 2px 10px rgba(0, 0, 0, .25) inset,
+ 	0 2px 10px rgba(0, 0, 0, .25);
+ 	border-radius:3px;
+ 	background: rgba(255, 255, 255, .5);
+ 	outline:none;
+ 	margin-bottom: 1rem;
+ 	filter:opacity(0.6);
+ 	width: 20rem;
+}
+textarea {height:10rem;}
+input[type="text"]:focus,textarea:focus 
+		{border:0.1rem solid white;}
+input[type="checkbox"] {margin-right:1rem; }
+input[type="button"] {float: right; }
+.centro {margin:0 auto; display: flex; flex-direction: column; 
+	}
+.marg {margin-bottom:2rem;}
+
+
+footer {margin-bottom: 3vh; 
+	display:flex; 
+	align-content: space-around; justify-content: space-around; 
+	flex:0 1 100%;}
+.text {margin-top: 1rem}
+.ico {display: flex; justify-content: flex-end;}
+.ico a:nth-child(1) { width: 3rem; height:3rem;
+	background: url(img/sprite.png);}
+.ico a:nth-child(2) { width: 3rem; height:3rem;
+	background: url(img/sprite.png) 50px 50px;}	
+.ico a:nth-child(3) { width: 3rem; height:3rem;
+	background: url(img/sprite.png) 0px 50px;}
+.ico a:nth-child(4) { width: 3rem; height:3rem;
+	background: url(img/sprite.png) 50px 0px;}
+
+@keyframes opacity {
+	0% {filter:opacity(0);}
+	100% {filter: opacity(0.9);}
+}
+@keyframes rotation {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(720deg);}
+}
+@media (max-width: )
+@media (min-width: 1200px) {
+	.portfolio {width:70vw;}
+}
+@media (max-width: 1200px) {
+	.portfolio {width:80vw;}
+	* {font-size:13px;}
+}
+@media (max-width: 600px) {
+	* {font-size: 10px;}
+}
+@media (max-height: 500px) {
+	.logo{display:none;}
+	/*.second-screen .block {height: 30rem;}*/
+}
+@media (max-width: 500px) {
+	.block-small img { width: 50px; }	
+	.third-screen h2 {margin-bottom: 2rem;}
+}

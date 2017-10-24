@@ -24,7 +24,7 @@ header {
 	margin-left:2em;
 /*сюда воткнуть логотип сайта*/
 	 }
-.gear {padding:1rem; animation-name: rotation; animation-duration: 10s;
+.gear {padding:1rem; width:4rem; height: 4rem; animation-name: rotation; animation-duration: 10s;
 	animation-iteration-count: infinite; background-color: transparent;
 	animation-timing-function: linear;}
 .logo { display:flex; 
@@ -242,24 +242,28 @@ footer {margin-bottom: 3vh;
 }
 @keyframes rotation {
 	0% {transform: rotate(0deg);}
-	100% {transform: rotate(720deg);}
+	100% {transform: rotate(360deg);}
 }
-@media (max-width: )
-@media (min-width: 1200px) {
-	.portfolio {width:70vw;}
+@media screen and (min-width: 1200px) {
+	.portfolio {width:60vw;}
+/*	.image {width:20rem;}
+	.image img {width:20rem;}
+	.image a {margin:7rem 8rem;}*/
 }
-@media (max-width: 1200px) {
-	.portfolio {width:80vw;}
+@media screen and (min-width: 900px) and (max-width: 1199px){
+	.portfolio {width:60vw;}
 	* {font-size:13px;}
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 	* {font-size: 10px;}
 }
-@media (max-height: 500px) {
+@media screen and (max-height: 500px) {
 	.logo{display:none;}
-	/*.second-screen .block {height: 30rem;}*/
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
 	.block-small img { width: 50px; }	
 	.third-screen h2 {margin-bottom: 2rem;}
+}
+@media screen and (min-height: 750px) {
+	footer:before {display: table; clear:both; content: "";}
 }

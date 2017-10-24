@@ -171,7 +171,7 @@ p {
 .image:last-child {background-image: url(img/6image.jpg);}
 .image:hover img {display: flex; animation-name: opacity;
 	animation-duration: 1s; animation-fill-mode: forwards;}
-.image:hover a {display:flex; filter:opacity(0.9);}
+.image:hover a {display:flex; animation-name:opacity; animation-duration: 1s; animation-fill-mode: forwards;}
 .image img {display:none; position:absolute; 
 	background-image: url(img/BG.png);
 	 width:15rem; height:15rem;}
@@ -265,5 +265,4 @@ footer {margin-bottom: 3vh;
 	.third-screen h2 {margin-bottom: 2rem;}
 }
 @media screen and (min-height: 750px) {
-	footer:before {display: table; clear:both; content: "";}
 }

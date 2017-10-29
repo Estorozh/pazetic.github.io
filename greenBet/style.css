@@ -173,14 +173,14 @@ h2 {font-size:1.5em; margin-top:2rem;}
 		}
 }
 /* мяч слева от кнопки*/
-.ball2 { width:200px; height:120px; 
+.ball2 { width:200px; height:140px; 
 	background: transparent url(img/ball2.gif) no-repeat 50% 50%;
 	animation: move_ball2 3s infinite alternate ease-in;
 }
 @keyframes move_ball2 {
-	0% {transform: translate(5vw, 47vh);
+	0% {transform: translate(0, 15rem);
 		filter: drop-shadow(0px 3rem 30px);}
-	100% {transform: translate(5vw,47vh) rotate(25deg);
+	100% {transform: translate(0,16rem) rotate(25deg);
 		filter: drop-shadow(10px 2rem 5px);}	
 }
 /*мяч слева от текста сверху*/
@@ -219,9 +219,9 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	animation: move_ball6 3.3s infinite alternate ease-in;
 }
 @keyframes move_ball6 {
-	0% {transform: translate(0vw, 45vh);
+	0% {transform: translate(0, 45vh);
 		filter: drop-shadow(0px 3.2rem 25px);}
-	100% {transform: translate(0vw, 45vh) rotate(25deg);
+	100% {transform: translate(0, 46vh) rotate(25deg);
 		filter: drop-shadow(10px 2.2rem 5px);}
 }
 /*мяч справа верхнего текста*/
@@ -234,8 +234,45 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	100% {transform: translate(-10vw, 0vh) rotate(30deg);}
 }
 
+@media screen and (max-width:768px) {
+/*планшетный размер*/
+	.ball3,.ball7 {display:none;}
+	.ball2 {
+		animation: move_ball2_pad 3s infinite alternate ease-in;
+	}
+	@keyframes move_ball2_pad {
+	0% {transform: translate(-5rem, 12rem);
+		filter: drop-shadow(0px 3rem 30px);}
+	100% {transform: translate(-5rem,13rem) rotate(25deg);
+		filter: drop-shadow(10px 2rem 5px);}	
+	}
+	.ball4 {	
+	  animation: rotate_balls4_pad 9s infinite alternate-reverse;
+    }
+    @keyframes rotate_balls4_pad {
+	  0% {transform: translate(-10rem, 7rem) rotate(0deg);}
+	  100% {transform: translate(-10rem, 7rem) rotate(180deg);}
+    }
+}
+
+
+@media screen and (max-width: 340px) {
+/*медиа для телефонного отображения*/
+	.ball2,.ball3,.ball4,.ball5,.ball7 {display:none;}
+	h1 {font-size: 46px;}
+	.ball1 {
+		animation:none; 
+		transform: translate(1vw,88vh); 
+		order:2;
+	}
+	.ball6 {
+		animation:none; 
+		transform: translate(-20vw,30vh); 
+		order:1;
+	}
+}
 @media screen and (max-height: 450px) {
-	/*Медиа для уменьшения высоты */
+/*Медиа для уменьшения высоты */
 	* {font-size:12px;}
 	.ball1 {display: none;}
 	.balls {height:70%;}
@@ -244,21 +281,14 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	.translate_but:after {content:"";  width: 16.5rem; height:0.5rem;
 	background-color: #007130; border-radius: 0px 0px 5px 5px;}
 }
-/*медиа для телефонного отображения*/
-@media screen and (max-width: 340px) {
-
-	.ball2,.ball3,.ball4,.ball5,.ball7 {display:none;}
-	.ball1 {animation:none; transform: translate(1vw,88vh); order:2;}
-	.ball6 {animation:none; transform: translate(-20vw,30vh); order:1;}
-}
 @media screen and (min-height: 600px) {
-	/*медиа для увеличения ширины экрана*/
+/*медиа для увеличения ширины экрана*/
 	h1 {margin-bottom: 3rem;}
 	.carousel {margin-bottom: 2rem;}
 	.translate_but {transform: scale(1.2);}
 }
 @media screen and (min-height: 800px) {
-	/*для увеличения высоты*/
+/*для увеличения высоты*/
 	h1 {margin-bottom:7rem;}
 	.bg_money {background-position: center center;}
 	.translate_but {

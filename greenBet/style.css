@@ -2,32 +2,45 @@
 	padding: 0px; 
 	margin:0px; 
 	box-sizing: border-box;	
+	font-size:16px;
 }
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 /*#007730 -верх #00220d - низ */ 
 body {
+	overflow-x: hidden;
 	background: linear-gradient(to top,#00220d,#007730);
 	text-transform: uppercase;
-	box-shadow: 0 0 50rem 100px inset;
-	height:100%; font-family: 'Oswald:400', sans-serif;
-	justify-content: center; align-items:center; height:100vh; }
-header {display:flex; 
+	height:100vh; 
+	font-family: 'Oswald:400', sans-serif;
+}
+header {
+	display:flex; 
 	height: 1rem; width:100%; 
-	justify-content: center; align-items: center; }
+	justify-content: center; 
+	align-items: center; }
 /*BG*/
-.bg_money {height:100%; width:100%; position:absolute;
-	display:flex; justify-content: center; align-items: center;}
-.bg_money img {z-index:-2; 
-		height:100%; width:100%; opacity:0.7; overflow: hidden;}
+.bg_money {
+	height:100%; width:100%; 
+	position:absolute;
+	background: url(img/BG.gif) 50% 0% no-repeat; 
+	background-size: cover;
+	z-index: -5; 
+	overflow:hidden;
+	}
 /*Логотип */
-header img {margin-top:4rem; display:block; height:1rem; 
-	  animation:logo_shadow 1.5s infinite alternate;}
+header img {
+	margin-top:4rem; 
+	display:block; 
+	height:1rem; 
+	animation:logo_shadow 1.5s infinite alternate;
+}
 @keyframes logo_shadow {
 	0% {filter:drop-shadow(-10px 0px 5px #009a3e);}
 	100% {filter:drop-shadow(-10px 0px 5px transparent);}
 }
 /*Заголовок*/
 h1 {
+	max-width: 100%;
 	font-size: 3em;
 	margin-top: 5rem;
 	text-align: center;	
@@ -39,14 +52,19 @@ section {display:flex;
 	align-items: center; 
 	}
 /*карусель*/
-h2, p  { text-align: center; color:white; 
-	text-shadow: 0px 0px 1px #00c353,0px 0px 3px #00c353;}
+h2, p  { text-align: center; 
+	color:white; 
+	text-shadow: 0px 0px 1px #00c353,0px 0px 3px #00c353;
+}
 h2 {font-size:1.5em; margin-top:2rem;}
-.carousel {width: 20rem; height: 7rem;
+.carousel {
+	width: 20rem; height: 7rem;
 	display:flex;
 	position:relative;
-	overflow: hidden;}
-.carousel div { position: absolute;
+	overflow: hidden;
+}
+.carousel div { 
+	position: absolute;
 	display:block;
 	text-align: center;
 	height: 100%; width:100%;
@@ -84,8 +102,12 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	border-radius: 5px;
 	padding:0.5em 0.2rem; 
 	}
-.translate_but:after {content:"";  width:17.2rem; height:0.7rem;
-	background-color: #007130; border-radius: 0px 0px 5px 5px; 
+.translate_but:after {
+	content:"";  
+	width:17.2rem; height:0.7rem;
+	background-color: #007130; 
+	border-radius: 0px 0px 5px 5px; 
+	display:block;
 }
 /*Перемещение кнопки*/
 .translate_but {
@@ -93,13 +115,17 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	animation-iteration-count: infinite;
 	animation-duration: 8s; 
 	animation-delay:0.5s; 
-	display: flex; 
+	display:flex; 
 	justify-content: center; 
 	align-items:center; 
 	flex-direction: column;
 }
 .translate_but:hover {
-	animation-play-state: paused;}
+	animation-play-state: paused;
+}
+.translate_but:hover .button {
+	background: linear-gradient(to bottom,#009336, #00ae40);
+}
 @keyframes translate_button {
 	0% {transform:translatey(0); filter: drop-shadow(0 6rem 30px);}
 	50% {transform:translatey(2rem); filter: drop-shadow(0 4rem 10px);}
@@ -110,84 +136,121 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	transform: perspective(90px) rotate3d(1,0,0,35deg);
 }
 .translate_but:active:after {content:"";  width:18.4rem; height:0.7rem;
-	background-color: #007130; border-radius: 0px 0px 5px 5px; }
+	background-color: #007130; border-radius: 0px 0px 5px 5px; display:block; }
 /*мячики*/
 .balls {
 	position:absolute; 
-	display: flex; 
+	display:flex; 
+	flex-wrap: wrap;
 	overflow: hidden;
 	width:100%; 
-	height:90%;
+	height:97%;
 	z-index: -1;	
+	justify-content: space-between;
+	/*flex: 1 0 auto;*/
 }
-/*.balls img:first-child {
-	animation: move_ball1 9s infinite alternate ease-out;
 
-}*/
-.ball1{align-self:space-around;
-	width:120px; height:120px;
+.ball1,.ball2,.ball3,.ball4,.ball5,.ball6,.ball7 {
+	box-sizing: border-box;
+	max-width:100%; 
+	/*хак, чтобы шары не вылазили за грань экрана*/
+	
+}
+/*центральный мяч*/
+.ball1{
+	width:120px; 
+	height:120px; 
 	background: transparent url(img/ball1.gif) no-repeat 50% 50%;
+	-ms-animation: move_ball1 9s infinite alternate ease-out;
 	animation: move_ball1 9s infinite alternate ease-out;
 }
 @keyframes move_ball1 {
-	0% {transform: translate(53rem,20rem) ; 
+	0% {transform: translate(65vw,60vh) ; 
 		filter: drop-shadow(15px 6rem 20px);
 		}
-	100% {transform: translate(53rem,23rem) rotate(45deg); 
+	100% {transform: translate(65vw,64vh) rotate(45deg); 
 		filter: drop-shadow(50px 2rem 5px);
 		}
 }
-.ball2 {position:absolute; width:200px; height:120px;
+/* мяч слева от кнопки*/
+.ball2 { width:200px; height:120px; 
 	background: transparent url(img/ball2.gif) no-repeat 50% 50%;
 	animation: move_ball2 3s infinite alternate ease-in;
 }
 @keyframes move_ball2 {
-	0% {transform: translate(15rem, 14rem);
+	0% {transform: translate(5vw, 35vh);
 		filter: drop-shadow(0px 3rem 30px);}
-	100% {transform: translate(15rem, 15rem) rotate(25deg);
+	100% {transform: translate(5vw, 35vh) rotate(25deg);
 		filter: drop-shadow(10px 2rem 5px);}	
 }
-.ball3 {position:absolute; width:120px; height:120px; 
+/*мяч слева от текста сверху*/
+.ball3 { width:120px; height:120px; 
 	background: transparent url(img/ball3.gif) no-repeat 50% 50%;
 	animation: rotate_balls3 8s infinite alternate-reverse ease-in;
+	position: absolute;
 }
 @keyframes rotate_balls3 {
-	0% {transform: translate(18rem, -2rem) rotate(0deg);}
-	100% {transform: translate(18rem, -2rem) rotate(30deg);}
+	0% {transform: translate(18vw, 2vh) rotate(0deg);}
+	100% {transform: translate(18vw, 2vh) rotate(30deg);}
 }
-.ball4 {position:absolute; width:120px; height:120px;
+/*мяч в тексте карусели*/
+.ball4 { width:120px; height:120px;
 	background: transparent url(img/ball4.gif) no-repeat 50% 50%;
 	z-index: -1;		
 	animation: rotate_balls4 9s infinite alternate-reverse;
 }
 @keyframes rotate_balls4 {
-	0% {transform: translate(30.5rem, 6.8rem) rotate(0deg);}
-	100% {transform: translate(30.5rem, 6.8rem) rotate(180deg);}
+	0% {transform: translate(0vw, 18vh) rotate(0deg);}
+	100% {transform: translate(0vw, 18vh) rotate(180deg);}
 }
-.ball5 {position:absolute; width:120px; height:120px;
+/*большой мяч спрятанный за текстом*/
+.ball5 {width:120px; height:120px;
 	background: transparent url(img/ball5.gif) no-repeat 50% 50%;
 	z-index: -1;		
 	animation: rotate_balls5 4s infinite alternate-reverse ease-in-out;
 }
 @keyframes rotate_balls5 {
-	0% {transform: translate(50rem,2rem) rotate(0deg);}
-	100% {transform: translate(50rem,2rem) rotate(30deg);}
+	0% {transform: translate(0vw,2rem) rotate(0deg);}
+	100% {transform: translate(0vw,2rem) rotate(30deg);}
 }
-.ball6 {position:absolute;width:120px; height:120px;
+/*мяч справа нижний*/
+.ball6 {width:100px; height:120px;
 	background: transparent url(img/ball6.gif) no-repeat 50% 50%;
 	animation: move_ball6 3.3s infinite alternate ease-in;
 }
 @keyframes move_ball6 {
-	0% {transform: translate(58.5rem, 13rem);
-		filter: drop-shadow(0px 3.2rem 30px);}
-	100% {transform: translate(58.5rem, 14rem) rotate(25deg);
-		filter: drop-shadow(10px 2.2rem 7px);}
+	0% {transform: translate(0vw, 40vh);
+		filter: drop-shadow(0px 3.2rem 25px);}
+	100% {transform: translate(0vw, 40vh) rotate(25deg);
+		filter: drop-shadow(10px 2.2rem 5px);}
 }
-.ball7 {position:absolute;width:120px; height:120px;
+/*мяч справа верхнего текста*/
+.ball7 {width:120px; height:120px;
 	background: transparent url(img/ball7.gif) no-repeat 50% 50%;
 	animation: rotate_balls7 5s infinite alternate ease-in-out;
 }
 @keyframes rotate_balls7 {
-	0% {transform: translate(65rem, 0rem) rotate(0deg);}
-	100% {transform: translate(65rem, 0rem) rotate(30deg);}
+	0% {transform: translate(-10vw, 0vh) rotate(0deg);}
+	100% {transform: translate(-10vw, 0vh) rotate(30deg);}
+}
+/*Медиа для уменьшения высоты */
+@media screen and (max-height: 450px) {
+	* {font-size:12px;}
+	.ball1 {display: none;}
+	.balls {height:70%;}
+	.translate_but:active:after {content:"";  width:17.3rem; height:0.5rem;
+	background-color: #007130; border-radius: 0px 0px 5px 5px; }
+	.translate_but:after {content:"";  width: 16.5rem; height:0.5rem;
+	background-color: #007130; border-radius: 0px 0px 5px 5px;}
+}
+/*медиа для телефонного отображения*/
+@media screen and (max-width: 340px) {
+
+	.ball2,.ball3,.ball4,.ball5,.ball7 {display:none;}
+	.ball1 {animation:none; transform: translate(1vw,88vh); order:2;}
+	.ball6 {animation:none; transform: translate(-20vw,30vh); order:1;}
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+/*стили для ослика*/
+	
 }

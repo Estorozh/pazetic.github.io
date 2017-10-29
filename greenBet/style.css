@@ -178,9 +178,9 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	animation: move_ball2 3s infinite alternate ease-in;
 }
 @keyframes move_ball2 {
-	0% {transform: translate(5vw, 35vh);
+	0% {transform: translate(5vw, 47vh);
 		filter: drop-shadow(0px 3rem 30px);}
-	100% {transform: translate(5vw, 35vh) rotate(25deg);
+	100% {transform: translate(5vw,47vh) rotate(25deg);
 		filter: drop-shadow(10px 2rem 5px);}	
 }
 /*мяч слева от текста сверху*/
@@ -219,9 +219,9 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	animation: move_ball6 3.3s infinite alternate ease-in;
 }
 @keyframes move_ball6 {
-	0% {transform: translate(0vw, 40vh);
+	0% {transform: translate(0vw, 45vh);
 		filter: drop-shadow(0px 3.2rem 25px);}
-	100% {transform: translate(0vw, 40vh) rotate(25deg);
+	100% {transform: translate(0vw, 45vh) rotate(25deg);
 		filter: drop-shadow(10px 2.2rem 5px);}
 }
 /*мяч справа верхнего текста*/
@@ -233,8 +233,9 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	0% {transform: translate(-10vw, 0vh) rotate(0deg);}
 	100% {transform: translate(-10vw, 0vh) rotate(30deg);}
 }
-/*Медиа для уменьшения высоты */
+
 @media screen and (max-height: 450px) {
+	/*Медиа для уменьшения высоты */
 	* {font-size:12px;}
 	.ball1 {display: none;}
 	.balls {height:70%;}
@@ -252,15 +253,18 @@ h2 {font-size:1.5em; margin-top:2rem;}
 }
 @media screen and (min-height: 600px) {
 	/*медиа для увеличения ширины экрана*/
-	h1 {margin-top: 7rem;}
-	.bg_money {background-position: center center;}
+	h1 {margin-bottom: 3rem;}
+	.carousel {margin-bottom: 2rem;}
+	.translate_but {transform: scale(1.2);}
 }
 @media screen and (min-height: 800px) {
 	/*для увеличения высоты*/
-	h1 {margin-bottom: 5rem;	}
-	body {background-color: linear-gradient()}
+	h1 {margin-bottom:7rem;}
 	.bg_money {background-position: center center;}
-	.translate_but {margin-top: 5rem;}
+	.translate_but {
+		margin-top: 5rem; 
+		transform: scale(1.4);
+	}
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  

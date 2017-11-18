@@ -41,15 +41,6 @@ body {
   margin: 0;
 }
 
-@media (max-width: 320px) {
-  * {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
-}
-
-
 footer {
   font-family: 'Open Sans SemiBold', sans-serif;
   margin: 0 auto;
@@ -69,13 +60,6 @@ footer {
   }
 }
 
-/*footer span {
-  font-family: "OpenSans";
-  color: rgb(246, 247, 250);
-  line-height: 1.846;
-  font-size: 13px;
-}
-*/
 .lefter {
   display: flex;
   flex-direction: column;
@@ -147,9 +131,15 @@ footer {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+@media (max-width: 890px) {
+  .righter__input {
+    align-items: center;
+    width: 100%;
+  }
+}
 @media (max-width: 320px) {
   .righter__input {
-    width: 200px;
+    /*width: 200px;*/
   }
 }
 

@@ -119,10 +119,15 @@ footer {
   margin: 130px 30px 30px 30px;
   width: 60%;
 }
+@media (max-width: 890px) {
+  .righter {
+    margin: 30px;
+  }
+}
 @media (max-width: 320px) {
   .righter {
     flex-direction: column;
-    margin: 30px;
+    /*margin: 30px;*/
   }
 }
 

@@ -1,0 +1,206 @@
+/*fonts*/
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/MTP_ySUJH_bn48VBG8sNSj0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+footer {
+  font-family: 'Open Sans SemiBold', sans-serif;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1230px;
+  font-size: 13px;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #192431;
+  color: #f6f7fa;
+  min-height: 590px;
+}
+@media (max-width: 890px) {
+  footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+/*footer span {
+  font-family: "OpenSans";
+  color: rgb(246, 247, 250);
+  line-height: 1.846;
+  font-size: 13px;
+}
+*/
+.lefter {
+  display: flex;
+  flex-direction: column;
+  margin: 130px 30px 0 30px;
+}
+@media (max-width: 890px) {
+  .lefter {
+    margin: 30px;
+  } 
+}
+
+.lefter p {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(246, 247, 250);
+  line-height: 1.846;
+}
+
+.column a {
+  color: #f6f7fa;
+  text-decoration: none;
+}
+
+.column a:hover {
+  text-decoration: underline;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 320px) {
+  .column {
+    flex-direction: column;
+  }
+}
+
+.column ul {
+  padding: 0;
+  display: inline-block;
+}
+ 
+.column li {
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.846;
+}
+
+.column__first--padding, 
+.column__second--padding, 
+.column__third--padding {
+  margin-bottom: 10px;
+  font-family: 'Open Sans SemiBold', sans-serif;
+}
+
+
+.righter {
+  margin: 130px 30px 30px 30px;
+  width: 60%;
+}
+@media (max-width: 890px) {
+  .righter {
+    margin: 30px auto;
+  }
+}
+@media (max-width: 320px) {
+  * {padding: 0;}
+  .righter {
+    margin: 30px;
+    width: 320px;
+  }
+}
+
+.righter__input {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+@media (max-width: 320px) {
+  .righter__input {
+    width: 200px;
+  }
+}
+
+.righter__input>input[type="text"] {
+  height: 60px;
+  width: 100%;
+  flex: 1;  
+}
+/*@media (max-width: 320px) {
+.righter__input>input[type="text"] {
+  height: 30px;
+}
+}*/
+
+.righter__button {
+  /*flex-grow: 1;*/
+  /*flex-shrink: 2;*/
+  background-color: #82ca9c;
+  width: 70px;
+  height: 60px;
+  border-radius: 0 5px 5px 0;
+}
+/*@media (max-width: 320px) {
+.righter__button {
+  height: 30px;
+}
+}*/
+
+.righter__button--arrow {
+  display: inline-block;
+  background-color: transparent;
+  margin: 10px 30px;
+  width: 15px;
+  height: 35px;
+  border-right: 3px solid #f4faf6;
+  border-bottom: 3px solid #f4faf6;
+  transform: rotate(45deg);
+}
+
+.righter__comment {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: rgb(87, 105, 127);
+  line-height: 1.5;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*.arrow {
+  display: block;
+  width: 20px;
+  height: 30px;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  transform: rotate(45deg);
+}*/

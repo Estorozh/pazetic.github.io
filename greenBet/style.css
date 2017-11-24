@@ -296,8 +296,6 @@ h2 {font-size:1.5em; margin-top:2rem;}
 	  100% {transform: translate(-10rem, 7rem) rotate(180deg);}
     }
 }
-
-
 @media screen and (max-width: 340px) {
 /*медиа для телефонного отображения*/
 	.ball2,.ball3,.ball4,.ball5,.ball7 {display:none;}
@@ -313,30 +311,31 @@ h2 {font-size:1.5em; margin-top:2rem;}
 		order:1;
 	}
 }
-@media screen and (max-height: 450px) {
+
+@media screen and (min-height: 600px) {
+/*медиа для увеличения ширины экрана*/
+	h1 {margin-bottom: 3rem;}
+	.bg_money {		height: 100%;	}
+	.carousel {margin-bottom: 2rem;}
+	.translate_but {transform: scale(1.2);}
+}
+
+@media screen and (max-height: 550px) {
 /*Медиа для уменьшения высоты */
 	/** {font-size:12px;}*/
-	.bg_money {
-		background-origin: cover;
-		height: 450px;
-	}
 	.ball1 {display: none;}
+	.bg_money { height:540px; }
 	.balls {height:70%;}
 /*	.translate_but:active:after {content:"";  width:17.3rem; height:0.5rem;
 	background-color: #007130; border-radius: 0px 0px 5px 5px; }
 	.translate_but:after {content:"";  width: 16.5rem; height:0.5rem;
 	background-color: #007130; border-radius: 0px 0px 5px 5px;}*/
 }
-@media screen and (min-height: 600px) {
-/*медиа для увеличения ширины экрана*/
-	h1 {margin-bottom: 3rem;}
-	.carousel {margin-bottom: 2rem;}
-	.translate_but {transform: scale(1.2);}
-}
+
 @media screen and (min-height: 800px) {
 /*для увеличения высоты*/
 	h1 {margin-bottom:7rem;}
-	.bg_money {background-position: center center;}
+	.bg_money {background-position: center center;		height: 500px;	}
 	.translate_but {
 		margin-top: 5rem; 
 		transform: scale(1.4);

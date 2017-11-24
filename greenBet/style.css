@@ -315,13 +315,17 @@ h2 {font-size:1.5em; margin-top:2rem;}
 }
 @media screen and (max-height: 450px) {
 /*Медиа для уменьшения высоты */
-	* {font-size:12px;}
+	/** {font-size:12px;}*/
+	.bg_money {
+		background-origin: cover;
+		height: 450px;
+	}
 	.ball1 {display: none;}
 	.balls {height:70%;}
-	.translate_but:active:after {content:"";  width:17.3rem; height:0.5rem;
+/*	.translate_but:active:after {content:"";  width:17.3rem; height:0.5rem;
 	background-color: #007130; border-radius: 0px 0px 5px 5px; }
 	.translate_but:after {content:"";  width: 16.5rem; height:0.5rem;
-	background-color: #007130; border-radius: 0px 0px 5px 5px;}
+	background-color: #007130; border-radius: 0px 0px 5px 5px;}*/
 }
 @media screen and (min-height: 600px) {
 /*медиа для увеличения ширины экрана*/

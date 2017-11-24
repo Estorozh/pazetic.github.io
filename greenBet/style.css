@@ -335,11 +335,8 @@ h2 {font-size:1.5em; margin-top:2rem;}
 @media screen and (min-height: 800px) {
 /*для увеличения высоты*/
 	h1 {margin-bottom:7rem;}
-	.bg_money {background-position: cover;		height: 100%;	}
-	.translate_but {
-		margin-top: 5rem; 
-		transform: scale(1.4);
-	}
+	.bg_money { background-position: cover; }
+
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  

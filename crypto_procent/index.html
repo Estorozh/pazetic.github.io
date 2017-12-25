@@ -3,16 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Высчитывание процентов</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 	<div class="form">
-	<form action="#"> 
-		<input type="text" class="first" value=0>
-		<input type="text" class="second">
-		<input type="submit" value="посчитать" class="button">
+	<div class="form">
+	<form class="f"> Минимальная стоимость
+		<input type="text" class="min" value=2><br> Максимальная стоимость
+		<input type="text" class="max" value=9>
+		<br> Процент на покупк(комиссия): <input type="text" class="percent" value="0.2"><br>
+		Процент прибыли: <input type="text" class="percentMax" value="2"><br>
+		Стоимость сейчас: <input type="text" class="now" value=10><br>
+		<input type="submit" value="посчитать" class="button" onclick="analyz()">
 	</form>
-	</div> -->
-	<span class="text" style="font-weight: bold; color: green;"></span>
+	</div>
+	<span class="succesful"></span>
 	<script src="script.js"></script>
 </body>
 </html>

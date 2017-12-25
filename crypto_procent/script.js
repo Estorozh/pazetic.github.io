@@ -15,7 +15,7 @@ let now = +prompt("сейчас стоимость: ", 0);
 //покупать или нет
 let text = "минимум стоимости: "+min+"<br>максимум стоимости: "+max+
 	"<br><br>валативность валюты: "+Math.round(vale)+"%<br><br>Стоимость покупки: "+buy+"<br>Стоимость продажи: "+sale+
-	"<br><br>Нынешняя стоимость не выгодна на: "+Math.round((now-buy)/(buy/100))+"%";
+	"<br><br>Нынешняя стоимость выше на: "+Math.round((now-buy)/(buy/100))+"%";
 if (now<buy) {
 	document.write(text+'<br><br><span style="font-weight:bold; color:green;">МОЖНО ПОКУПАТЬ</span>');
 } else {

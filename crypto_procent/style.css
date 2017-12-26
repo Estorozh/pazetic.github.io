@@ -30,6 +30,18 @@ input[type="button"] {
 	background-color: #3d5d42;
 }
 
+a {
+	margin: auto;
+	display: flex;
+	justify-content:  center;
+	background-color: lightyellow;
+	padding: 5px 10px;
+	border-radius: 7px;
+	width: 100px;
+	text-decoration: none;
+	color: black;
+}
+
 span {
 	margin: 0 auto;
 }

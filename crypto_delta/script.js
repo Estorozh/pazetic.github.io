@@ -6,7 +6,7 @@ function analyz () {
 	finish = +document.getElementsByClassName("finish")[0].value;
 //посчитать процент прибыли
 	let size = +document.getElementsByClassName("size")[0].value;
-	let plus = ((finish-((finish/1000)*2)-start+((start/1000)*2))*size).toFixed(5),
+	let plus = ((finish-((finish/1000)*4)-start+((start/1000)*4))*size).toFixed(5),
 	procent = ((plus/(start/100))/size).toFixed(5);
 	//покупать или нет
 	let text = "покупка: "+(start+((start/1000)*2)).toFixed(5)+"<br>продажа: "+

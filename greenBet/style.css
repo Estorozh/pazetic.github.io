@@ -121,7 +121,7 @@ h2 {font-size:1.5em; margin-top:2rem;}
 /*кнопка - link*/
 .button {  
 	font-family: Oswald-bold;
-	font-size:26px;
+	font-size:20px;
 	text-decoration: none;
 	color: white;
 	background: linear-gradient(to top,#009336, #00ae40); 

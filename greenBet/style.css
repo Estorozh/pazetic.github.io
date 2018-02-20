@@ -4,8 +4,8 @@
 	box-sizing: border-box;	
 	font-size:16px;
 }
-/*fonts*/
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+/*fonts
+@import url('https://fonts.googleapis.com/css?family=Oswald');*/
 /*
 @font-face {
   font-family: 'Oswald';

@@ -1,0 +1,221 @@
+:root{
+	--elem: #4D565B;
+	--bgcFace: #ffd8a9;
+	--hair: #5A5A5AFF;
+}
+.img0 {
+	position: fixed;
+	margin-left: 3vw;
+	margin-top: 1em;
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+/*рамка*/
+.img0::before {
+	width: 7em;
+	height: 9em;
+	content: '';
+	position: absolute;
+	border: 5px solid #B67A11FF;
+	left: 2.6vw;
+
+}
+/*одежда*/
+.cloth {
+	margin-left:30%;
+	position: absolute;
+	background-color: #8A87DCFF;
+	top: 7em;
+	left: -.2em;
+	width: 7.2em;
+	height: 2.2em;
+	border: 1px solid var(--elem);
+	border-top-right-radius: 40%;
+	border-top-left-radius: 40%;
+	z-index: -1;
+}
+.me {
+	margin-top: 10px;
+	margin-left:4vw;
+	background-color: var(--bgcFace);
+	width: 4.5em;
+	height: 7em;
+	border-radius: 45% 45% 40% 40%;
+	border: .1em solid var(--elem);
+	/*background-image: radial-gradient(ellipse, 50%,transparent 50%);*/
+	/*box-shadow: inset 0 -3px 5px var(--hair) ;*/
+}
+/*борода и волосы*/
+.me::before {
+	content:'';
+	width: 4.2em;
+	height: 6.6em;
+	position: absolute;
+	border: .75em solid var(--hair);
+	border-bottom-color: var(--hair);
+	border-radius: 40%;
+	border-left-color:var(--hair);
+	border-left-width: .2em;
+	border-right-width: .2em; 
+	border-top-width: .2em;
+}
+/*уши*/
+.me::after {
+	content:'';
+	top:2.4em;
+	left: 3em;
+	background-color: var(--bgcFace);
+	width: 5.1em;
+	height: 2.6em;
+	position: absolute;
+	border: .1em solid var(--elem);
+	border-radius: 40%;
+	z-index:-5;
+}
+/*брови*/
+.lBrow {
+	margin-left:30%;
+	content:'';
+	left: 1.6em;
+	top: 2.4em;
+	width: 1em;
+	height: .3em;
+	position: absolute;
+	-webkit-transform: rotate(-10deg);
+	        transform: rotate(-10deg);
+	background-color: var(--hair);
+}
+.lBrow::before {
+	content:'';
+	left: -.2em;
+	width: .3em;
+	height: .3em;
+	position: absolute;
+	/*transform: rotate(-13deg);*/
+	-webkit-transform: skewX(11deg);
+	        transform: skewX(11deg);
+	background-color: var(--hair);
+	border-radius: 50%;
+}
+.lBrow::after {
+	content:'';
+	left: .9em;
+	/*top: 1em;*/
+	width: .3em;
+	height: .3em;
+	position: absolute;
+	-webkit-transform: skewX(-11deg);
+	        transform: skewX(-11deg);
+	background-color: var(--hair);
+	border-radius: 50%;
+}
+.rBrow {
+	margin-left:30%;
+	content:'';
+	left: 3.6em;
+	top: 2.4em;
+	width: 1em;
+	height: .3em;
+	position: absolute;
+	-webkit-transform: rotate(10deg);
+	        transform: rotate(10deg);
+	background-color: var(--hair);
+}
+.rBrow::before {
+	content:'';
+	left: -.2em;
+	width: .3em;
+	height: .3em;
+	position: absolute;
+	/*transform: rotate(-13deg);*/
+	-webkit-transform: skewX(11deg);
+	        transform: skewX(11deg);
+	background-color: var(--hair);
+	border-radius: 50%;
+}
+.rBrow::after {
+	content:'';
+	left: .9em;
+	/*top: 1em;*/
+	width: .3em;
+	height: .3em;
+	position: absolute;
+	-webkit-transform: skewX(-11deg);
+	        transform: skewX(-11deg);
+	background-color: var(--hair);
+	border-radius: 50%;
+}
+/*глаза*/
+.lefteye {
+	margin-left:30%;
+	position: absolute;
+	width: .7em;
+	height: .7em;
+	content: '';
+	background-color: transparent;
+	left: 1.6em;
+	top: 3em;
+	border: .3em solid;
+	border-radius: 50%;
+	border-bottom-color: var(--bgcFace);	
+	border-left-color: var(--bgcFace);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+.righteye {
+	margin-left:30%;
+	position: absolute;
+	width: .7em;
+	height: .7em;
+	content: '';
+	background-color: transparent;
+	left: 3.5em;
+	top: 3em;
+	border: .3em solid;
+	border-radius: 50%;
+	border-bottom-color: var(--bgcFace);	
+	border-left-color: var(--bgcFace);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);		
+}
+/*нос*/
+.lefteye::before {
+	position: absolute;
+	left: -.3em;
+	top: 1.1em;
+	content: '';
+	width: .3em;
+	height: 1em;
+	border: .2em solid var(--bgcFace);
+	border-left-color: var(--hair);
+	border-bottom-color: var(--hair);
+	border-radius: 50%;
+	-webkit-transform:rotate(-45deg);
+	        transform:rotate(-45deg);
+	z-index:2;
+}
+/*рот*/
+.mouth {
+	margin-left:30%;
+	position: absolute;
+	background-color: #FF715A;
+	left: 2.1em;
+	top: 5.6em;
+	width: 1.5em;
+	height: .7em;
+	border: .3em solid #CEAE89FF;
+	border-radius: 10% 10% 50% 50%;
+	content:'';
+	box-shadow: inset 0 .3em 0 #fff;
+}
+/*ямочка на рту*/
+.mouth::before {
+	position: absolute;
+	content: '';
+	width: .5em;
+	height: .3em;
+	background-color: var(--bgcFace);
+	border-radius: 50%;
+	left: .5em;
+	top: -.45em;
+}

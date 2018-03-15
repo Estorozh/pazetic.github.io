@@ -1,0 +1,43 @@
+.img1{
+	position: fixed;
+	margin-left: 23vw;
+	margin-top: 2em;
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+.computer {
+	width: 9.8em;
+	height: 6.4em;
+	background-color: var(--active-line);
+	border: .5em solid #D0D0D0FF;
+	border-radius: 7px 7px 0 0;
+}
+.computer:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: .1em;
+	width: .25em;
+	height: .25em;
+	border-radius: 50%;
+	background: #414141FF;
+}
+.content {
+	width: 17.5em;
+	height: 10em;
+	left: 50%;
+	margin-left: 8.75em;
+	overflow: hidden;
+}
+.btm {
+	position: absolute;
+	width: 12.3em;
+	height: .4em;
+	bottom: -.4em;
+	left: 50%;
+	margin-left: -6.15em;
+	border: 1px solid var(--elem);
+	border-radius: 0 0 20px 20px;
+	background-color: #D0D0D0FF;
+	z-index: 1;
+}

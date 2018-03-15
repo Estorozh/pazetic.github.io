@@ -1,0 +1,91 @@
+.img3 {
+  position: fixed;
+  margin-left: 69vw;
+  margin-top: 3.5em;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.img3::after {
+	content: '';
+	position: absolute;
+	background: var(--elem);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	top: 71px;
+	left: 16.5px;
+}
+.img3::before {
+	content: '';
+	position: absolute;
+	background: var(--elem);
+	width: 16px;
+	height: 3px;
+	border-radius: 30%;
+	top: 3px;
+	left: 12px;
+	z-index: 1;
+}
+.phone {
+  position: absolute;
+  width: 35px;
+  height: 60px;
+  background: var(--active-line);
+  border-radius: 5px 5px 5px 5px;
+  border: 6px solid silver;
+  border-top-width: 10px;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-bottom-width: 10px;
+}
+.phone::before {
+	content: '';
+	position: absolute;
+	background: #69FF23FF;
+	width: 15px;
+	height: 8px;
+	border-radius: 0 40% 40% 0;
+	top: 42px;
+}
+.phone::after {
+	content: '';
+	position: absolute;
+	background: #FF2E13FF;
+	width: 15px;
+	height: 8px;
+	border-radius: 40% 0 0 40%;
+	top: 42px;
+	left: 19px;
+}
+.style_phone {
+	position: absolute;
+	background: silver;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	top: 10px;
+	left: 5.5px;
+	border: 2px solid silver;
+}
+.style_phone::after {
+	content: '';
+	position: absolute;
+	background: silver;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	top: 31px;
+	opacity: .3;
+}
+.style_phone::before {
+	content: '';
+	position: absolute;
+	background: red;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	top: 31px;
+	left:12px;
+	opacity: 1;
+	z-index: 1;
+}

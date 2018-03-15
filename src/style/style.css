@@ -1,0 +1,267 @@
+/*поменять шрифты*/
+/*@import url("https://fonts.googleapis.com/css?family=Fira+Sans");*/
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+* {
+  /*box-sizing: border-box;*/
+}
+:root{
+  --height: 3px;
+  --active-line:  #589CF7;
+  --bgc: #2A3436;
+  --elem: #4D565B;
+  --ltr-start: 0;
+  --ltr-end: 90%;
+  --rtl-start: 0;
+  --rtl-end:90%;
+  --scale:20vw;
+  --opac: .5;
+}
+
+html, body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 96vh;
+  max-width: 100vw;
+  background-color: var(--bgc);
+  font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main-top {
+  border: 3px solid var(--elem);
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  color: #fff;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80vw;
+  height: 30vh;
+  opacity: var(--opac);
+  -webkit-transition: all .8s ease-in;
+     -moz-transition: all .8s ease-in;
+      -ms-transition: all .8s ease-in;
+       -o-transition: all .8s ease-in;
+          transition: all .8s ease-in;
+  background-color: var(--bgc);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+lh {
+  font-weight: bold;
+}
+
+.main-bottom {
+  border: 3px solid var(--active-line);
+  border-radius: 15px;
+  position: relative;
+  /*max-width: 80vw;*/
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+  overflow: hidden;
+  /*background-image: url(../img/cut-smart.jpg);*/
+  width: var(--scale);
+  transition: all .5s ease;
+  opacity: 0;
+  font-size: 16px;
+}
+
+#line {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 3px;
+  width: 80vw;
+  background-color: var(--elem);
+}
+
+.right::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  height: 3px;
+  background-color:var(--active-line);
+  animation-name: left-to-right;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.left::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  height: 3px;
+  background-color: var(--active-line);
+  animation-name: right-to-left;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+/*//анимация*/
+@keyframes left-to-right {
+  0% {
+    left: var(--rtl-start);
+    width: 0%;
+  }
+  50% {
+    width: 20%;
+  }
+  100% {
+    left: var(--rtl-end);
+    width: 0%;
+  }
+}
+@keyframes right-to-left {
+  0% {
+    right: var(--ltr-end);
+    width: 0%;
+  }
+  50% {
+    width: 20%;
+  }
+  100% {
+    right: var(--ltr-start);
+    width: 0%;
+  }
+}
+/*//прописываем размерность*/
+.link4,
+.link1,
+.link3,
+.link2 {
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid var(--elem);
+  cursor: pointer;
+  background-color: var(--bgc);
+  transition: all .3s ease;
+  z-index: 5;
+}
+.link1,.link4 {
+  transform: translate(0%, -50%);
+}
+/*расположение линков*/
+.link4 {
+  right: calc(-18px);
+}
+.link3 {
+  right: calc(33%);
+}
+.link2 {
+  right: calc(66%);
+}
+.link1 {
+  left: calc(-18px);
+}
+
+.link1 ::after,
+.link4 ::after,
+.link3 ::after,
+.link2 ::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: var(--bgc);
+}
+/*если ссылка становится активной*/
+#line .link1.active,
+#line .link2.active,
+#line .link3.active,
+#line .link4.active {
+  width: 8vw;/*//90px*/
+  height: 7vh;/*45px*/
+  min-width: 90px;
+  min-height: 45px;
+  border-radius: 10px;
+  border-color: var(--active-line);
+  transition: all .3s ease;
+}
+/*пропписывае текст*/
+.show::after {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: #fff;
+}
+#line .link1.show::after {content: 'Обо мне';}
+#line .link2.show::after {content: 'Навыки';}
+#line .link3.show::after {content: 'Опыт';}
+#line .link4.show::after {content: 'Контакты';}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+ul {
+  margin: 0;
+}
+/*прописать обводку выше и ниже*/
+
+span {
+  color: #fff;
+  font-size: .7em;
+}
+
+/*стиль скролбара в оригинале должен быть ::-webkit-scrollbar*/
+.main-top::-webkit-scrollbar {
+    width:12px;/* толщина*/
+}
+.main-top::-webkit-scrollbar-thumb {
+    border-radius: 0 30px 30px 0;
+    border-width:1px 1px 1px 2px; 
+    border-color: var(--bgc);
+    background-color: var(--elem);
+}
+.main-top::-webkit-scrollbar-thumb:hover {
+    border-width: 1px 1px 1px 2px;
+    border-color: var(--elem);
+    background-color: var(--active-line);
+}
+.main-top::-webkit-scrollbar-track {
+    border-radius: 0 30px 30px 0;
+    border-width:0;
+}
+.main-top::-webkit-scrollbar-track:hover {
+    border-left: solid 1px var(--elem);
+    background-color: var(--bgc);
+}
+
+@media screen and (max-width: 980px) {
+  html, body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 96vh;
+    max-width: 100vw;
+    background-color: var(--bgc);
+    font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .main-top {height: 70vh;}
+  .ctrl {display: none;}
+  .main-bottom {display: none;}
+}
